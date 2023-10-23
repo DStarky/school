@@ -1,0 +1,79 @@
+.btn {
+  background: none;
+  border: none;
+  outline: none;
+  color: $white;
+  cursor: pointer;
+
+}
+
+.btn-sign-up,
+.btn-more {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+
+
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.btn-sign-up {
+  border-radius: 90px;
+  background: linear-gradient(273deg, #864FF1 0%, #49B3F7 100%);
+  box-shadow: 0px 6px 21px 0px rgba(104, 130, 245, 0.67);
+
+  padding: 2.7rem 4.4rem;
+
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 118.2%;
+  letter-spacing: 1.375px;
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+.btn-more {
+  border-radius: 50px;
+  border: 1px solid #4271DF;
+  background: linear-gradient(27deg, #4271DF 16.72%, #789CF1 95.45%);
+  box-shadow: 0px 4px 20px 0px #648CEB;
+
+  padding: 1rem 4.4rem;
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
+
+.btn-classes {
+  border-radius: 3rem;
+  background-image: linear-gradient(27deg, #4271DF 8%, #789CF1 50%, #49B3F7 51%, #864FF1 100%);
+  background-size: 250%;
+  background-position: left;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 118.2%;
+
+  padding: 1rem 3rem;
+
+  transition: padding 0.2s ease, background-position 0.2s ease;
+
+
+
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-position: right;
+      padding: 1.5rem 3rem;
+    }
+  }
+}

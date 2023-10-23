@@ -1,6 +1,11 @@
-[class$="__container"]{
-  max-width: 130rem;
+[class$="__container"] {
+  max-width: 100%;
   padding: 0 2rem;
   margin: 0 auto;
-  background: red;
+
+  @include _768 {
+    max-width: 120rem;
+    padding: 0 5rem;
+    margin: 0 auto;
+  }
 }

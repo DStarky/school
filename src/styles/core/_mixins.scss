@@ -1,10 +1,17 @@
 // Media mixins
 
-@mixin _576 {
-  @media screen and (min-width: 576px) {
+@mixin _415 {
+  @media screen and (min-width: 415px) {
     @content;
   }
 }
+
+@mixin _480 {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
 
 @mixin _768 {
   @media screen and (min-width: 768px) {
@@ -12,8 +19,8 @@
   }
 }
 
-@mixin _992 {
-  @media screen and (min-width: 992px) {
+@mixin _1000 {
+  @media screen and (min-width: 1000px) {
     @content;
   }
 }
