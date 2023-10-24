@@ -60,6 +60,14 @@
       &.header__phone-menu {
         font-size: 2rem;
       }
+
+      transition: color 0.2s ease;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $light;
+        }
+      }
     }
 
     &::after {
@@ -238,11 +246,11 @@
     position: relative;
     transform: translateX(1.6rem);
 
-    @include _768{
+    @include _768 {
       transform: translateX(0);
     }
 
-    &::before{
+    &::before {
       content: '';
       position: absolute;
       left: -2.4rem;
