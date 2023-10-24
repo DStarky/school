@@ -110,49 +110,6 @@
     }
   }
 
-  &__button {
-    display: block;
-    margin: 6.5rem auto 1.5rem;
-
-    @include _415 {
-      margin: 2.5rem auto 1.5rem;
-    }
-
-    @include _480 {
-      margin: 3rem auto 1.5rem;
-    }
-
-    @include _1000 {
-      margin: 4rem 0 1.5rem;
-    }
-  }
-
-  &__write {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.7rem;
-
-    p {
-      font-size: 1.4rem;
-
-      @include _768 {
-        font-size: 1.6rem;
-      }
-
-      @include _1000 {
-        font-size: 1.7rem;
-      }
-    }
-
-    @include _1000 {
-      justify-content: start;
-      margin-left: 2rem;
-    }
-  }
-
-
   &__image {
     margin-bottom: 4rem;
 
@@ -162,7 +119,7 @@
 
     @include _1000 {
       position: absolute;
-      max-width: 55%;
+      max-width: 52%;
       right: 0;
       bottom: 10%;
     }
@@ -173,14 +130,23 @@
     }
   }
 
-  &__social-link {
+  &__sign-up {
+    margin: 5rem auto 2rem;
 
-    transition: filter 0.2s ease;
+    @include _415 {
+      margin: 3rem auto 3rem;
+    }
 
-    @media (any-hover: hover) {
-      &:hover {
-        filter: brightness(1.1);
-      }
+    @include _768 {
+      margin: 3rem auto 2rem;
+    }
+
+    @include _1000 {
+      margin: 5rem 0;
+    }
+
+    @include _1200 {
+      margin: 4rem 0 1.5rem;
     }
   }
 

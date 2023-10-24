@@ -1,0 +1,47 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  max-width: 25rem;
+  margin: 0 auto;
+
+  &__button {
+    align-self: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &__write {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.7rem;
+
+    p {
+      font-size: 1.4rem;
+
+      @include _768 {
+        font-size: 1.6rem;
+      }
+
+      @include _1000 {
+        font-size: 1.7rem;
+      }
+    }
+
+    @include _1000 {
+      justify-content: start;
+      margin-left: 2rem;
+    }
+  }
+
+  &__social-link {
+
+    transition: filter 0.2s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+  }
+}
