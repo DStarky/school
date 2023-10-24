@@ -1,0 +1,142 @@
+.first {
+  &__inner {
+    position: relative;
+    background: $bg;
+    border-radius: 2.5rem;
+    padding: 3rem 3rem 0 3rem;
+
+    @include _768 {
+      padding: 2.5rem 2.5rem 0 22rem;
+    }
+
+    @include _1000 {
+      padding: 2rem 2rem 0 18rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    @include _1200 {
+      padding: 2.5rem 5rem 0 26rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+
+    @include _415 {
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+
+    @include _768 {
+      justify-content: start;
+    }
+
+  }
+
+  &__typography {
+    text-align: center;
+
+    @include _415 {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    max-width: 22rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+
+    @include _415 {
+      margin: 0;
+      margin-bottom: 1rem;
+      font-size: 2.4rem;
+    }
+
+    @include _480 {
+      max-width: 27rem;
+      margin-bottom: 2rem;
+    }
+
+    @include _768 {
+      max-width: 100%;
+    }
+
+    @include _1000 {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__text {
+    max-width: 24rem;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    line-height: 130%;
+
+    @include _415 {
+      margin: 0;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    @include _480 {
+      max-width: 27rem;
+    }
+
+    @include _768 {
+      max-width: 51rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__img {
+    width: 9rem;
+
+    @include _768 {
+      font-size: 1.4rem;
+      position: absolute;
+
+      width: 17rem;
+      left: 3rem;
+      bottom: 3.5rem;
+    }
+
+    @include _1000 {
+      width: 13rem;
+    }
+
+    @include _1200 {
+      width: 14rem;
+      left: 5.5rem;
+    }
+  }
+
+  &__sign-up {
+    margin-top: 1.5rem;
+
+    @include _415 {
+      margin-top: 2rem;
+    }
+
+    @include _768 {
+      margin-left: 0;
+    }
+
+    @include _1000{
+      margin-left: auto;
+    }
+
+    button {
+      padding: 2rem 2.5rem;
+
+      @include _415 {
+        padding: 2.7rem 4.4rem;
+      }
+    }
+  }
+}
