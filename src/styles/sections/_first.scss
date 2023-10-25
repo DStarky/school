@@ -1,12 +1,12 @@
 .first {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 
   @include _480 {
-    margin-bottom: 7rem;
+    padding-bottom: 7rem;
   }
 
-  @include _768{
-    margin-bottom: 8rem;
+  @include _768 {
+    padding-bottom: 8rem;
   }
 
   &__inner {
