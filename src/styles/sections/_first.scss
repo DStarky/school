@@ -1,4 +1,14 @@
 .first {
+  margin-bottom: 5rem;
+
+  @include _480 {
+    margin-bottom: 7rem;
+  }
+
+  @include _768{
+    margin-bottom: 8rem;
+  }
+
   &__inner {
     position: relative;
     background: $bg;
@@ -127,7 +137,7 @@
       margin-left: 0;
     }
 
-    @include _1000{
+    @include _1000 {
       margin-left: auto;
     }
 

@@ -14,15 +14,12 @@
   @include _1000 {
     padding-top: 7rem;
     padding-bottom: 9rem;
-  } 
+  }
 
   @include _1200 {
     padding-top: 11rem;
   }
 
-  &__title {
-
-  }
 
   &__grid {
     display: grid;
