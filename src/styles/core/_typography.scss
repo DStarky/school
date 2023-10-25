@@ -21,3 +21,29 @@ h5,
 h6 {
   font-family: 'ALS Schlange sans';
 }
+
+h2 {
+  text-align: center;
+  font-family: 'ALS Schlange sans';
+  font-size: 2.8rem;
+  line-height: 103.2%;
+  margin-bottom: 3rem;
+
+  @include _415 {
+    font-size: 3.4rem;
+  }
+
+  @include _768 {
+    font-size: 3.8rem;
+    margin-bottom: 4rem;
+  }
+
+  @include _1000 {
+    font-size: 4rem;
+  }
+
+  @include _1200 {
+    font-size: 5rem;
+    margin-bottom: 6rem;
+  }
+}

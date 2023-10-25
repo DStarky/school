@@ -130,9 +130,26 @@
 
   &__sign-up {
     margin: 5rem auto 2rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('/icons/right-arrow.png');
+      width: 4rem;
+      height: 4rem;
+      right: 3rem;
+      top: -5rem;
+    }
 
     @include _415 {
       margin: 3rem auto 3rem;
+    }
+
+    @include _480 {
+      &::after {
+        display: none;
+      }
     }
 
     @include _768 {
@@ -141,11 +158,22 @@
 
     @include _1000 {
       margin: 5rem 0;
+
+      &::after {
+        display: block;
+        background-image: url('/icons/left-arrow.png');
+        width: 7rem;
+        height: 7rem;
+        right: -8rem;
+        top: -3rem;
+      }
     }
 
     @include _1200 {
       margin: 4rem 0 1.5rem;
     }
+
+
   }
 
 }
