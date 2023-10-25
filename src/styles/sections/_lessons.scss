@@ -30,6 +30,7 @@
       grid-template-rows: repeat(2, 1fr);
       gap: 4rem;
       grid-auto-flow: column;
+      align-items: end;
     }
 
     @include _1000 {
