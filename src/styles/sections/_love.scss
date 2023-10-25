@@ -1,0 +1,149 @@
+.love {
+  background-color: $bg;
+  padding-top: 3rem;
+
+  @include _768 {
+    padding-top: 4rem;
+  }
+
+  @include _1200 {
+    padding-top: 6rem;
+  }
+
+  &__title {
+    @include _1000 {
+      text-align: left;
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__gamification {}
+
+  &__item {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    gap: 1.5rem;
+    transition: background-color 0.4s, padding 0.4s, box-shadow 0.4s;
+    border-radius: 2.5rem;
+    padding: 1.5rem 1rem 1.5rem;
+    // margin-bottom: 3rem;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $white;
+        box-shadow: 5px 15px 40px 0px rgba(30, 35, 66, 0.15);
+
+
+        h4 {
+          background: var(--4, linear-gradient(273deg, #864FF1 0%, #49B3F7 100%));
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    @include _768 {
+      max-width: 100%;
+
+
+      &:last-child {
+        max-width: 50%;
+      }
+    }
+
+    @include _1000 {
+      max-width: 65%;
+
+      &:nth-child(3) {
+        max-width: 55%;
+      }
+    }
+
+    @include _1200 {
+      max-width: 50%;
+
+      &:nth-child(3) {
+        max-width: 50%;
+      }
+    }
+  }
+
+  &__item-title {
+    grid-column: 2 / 3;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 100%;
+
+    @include _415 {
+      font-size: 1.7rem;
+    }
+
+    @include _480 {
+      font-size: 2rem;
+    }
+  }
+
+
+  &__item-img {
+    justify-self: flex-end;
+  }
+
+  &__text {
+    grid-column: 2 / 3;
+    font-size: 1.4rem;
+    line-height: 130%;
+  }
+
+  &__img {
+    margin: 3rem auto;
+
+    @include _480 {
+      max-width: 75%;
+    }
+
+    @include _768 {
+      position: absolute;
+      max-width: 48%;
+      right: 0;
+      bottom: -13.5rem;
+      margin: 0;
+    }
+
+    @include _1200{
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+
+  &__sign-up {
+    margin: 3rem auto 2rem;
+    position: relative;
+
+    @include _415 {
+      margin: 3rem auto 3rem;
+    }
+
+    @include _768 {
+      margin: 2.5rem 0 4rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url('/icons/left-arrow.png');
+        width: 7rem;
+        height: 7rem;
+        right: -8rem;
+        top: -3rem;
+      }
+    }
+
+    @include _1000 {
+      margin: 2rem 0 4rem;
+    }
+  }
+}
