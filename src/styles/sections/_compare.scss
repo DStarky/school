@@ -1,17 +1,15 @@
 .compare {
-  padding-top: 5rem;
+  padding: 5rem 0;
+
 
   @include _480 {
-    padding-top: 7rem;
+    padding: 7rem 0;
   }
 
   @include _768 {
-    padding-top: 8rem;
+    padding: 8rem 0;
   }
 
-  @include _768 {
-    padding-top: 8rem;
-  }
 
   &__title {}
 
@@ -20,6 +18,61 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    @include _768 {
+      flex-direction: row;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+
+      @include _1000 {
+        background-image: url('/images/compare-bg-left.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 22.8rem;
+        height: 21rem;
+        top: 4rem;
+        left: 0;
+        z-index: -1;
+      }
+
+      @include _1200 {
+        width: 32rem;
+        height: 30rem;
+        top: 50%;
+        left: -14rem;
+        transform: translateY(-50%);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+
+      @include _1000 {
+        background-image: url('/images/compare-bg-right.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 22.8rem;
+        height: 21rem;
+        bottom: 4rem;
+        right: 0;
+        z-index: -1;
+      }
+
+      @include _1200 {
+        width: 32rem;
+        height: 30rem;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -14rem;
+      }
+
+
+    }
 
   }
 
@@ -27,34 +80,28 @@
     border-radius: 1.5rem 1.5rem 0 0;
     background: linear-gradient(180deg, #EFF2FD 0%, #FCFCFC 100%);
     filter: drop-shadow(3.9px 11.7px 31.2px rgba(30, 35, 66, 0.15));
-    padding: 2rem 2rem 1.5rem 5rem;
-
-    @include _480 {
-      padding: 3rem 2rem 1.5rem 5.6rem;
-    }
 
     @include _768 {
-      padding: 3rem 2rem 3.5rem 7rem;
+      border-radius: 1.5rem 0 0 1.5rem;
     }
-
-    @include _1200 {
-      padding: 4rem 2rem 4rem 8rem;
-    }
-
   }
 
   &__white-title {
+    text-align: center;
     font-size: 2.4rem;
+    padding-top: 2rem;
 
     @include _415 {
       font-size: 3.2rem;
     }
 
     @include _480 {
+      padding-top: 3rem;
       font-size: 2.8rem;
     }
 
     @include _1200 {
+      padding-top: 4rem;
       font-size: 3.2rem;
     }
   }
@@ -63,9 +110,44 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1.5rem 2rem 1.5rem 5rem;
+
+    @include _415 {
+      padding: 3rem 2rem 1.5rem 5.6rem;
+    }
+
+    @include _480 {
+      padding: 3rem 5rem 1.5rem 7rem;
+    }
+
+    @include _768 {
+      padding: 3rem 4rem 3.5rem 7rem;
+    }
+
+    @include _1200 {
+      padding: 3rem 3.5rem 4rem 8rem;
+    }
   }
 
   &__white-item {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+      background-color: $main;
+      left: -3rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include _1200 {
+        left: -3.5rem;
+      }
+    }
+
     p {
       font-size: 1.4rem;
       line-height: 150%;
@@ -95,34 +177,77 @@
     border-radius: 1.5rem;
     background: linear-gradient(27deg, #4271DF 16.72%, #789CF1 95.45%);
     filter: drop-shadow(3.9px 11.7px 31.2px rgba(30, 35, 66, 0.15));
-    padding: 2.5rem 2rem 2rem 6.5rem;
+
+  }
+
+  &__blue-title {
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 103.2%;
+    padding-top: 2.5rem;
 
     @include _415 {
-      padding: 3rem 4rem 3rem 7.5rem;
+      padding-top: 3rem;
+      font-size: 3.4rem;
     }
 
     @include _480 {
-      padding: 3rem 2rem 1.5rem 5.6rem;g
-    }
-
-    @include _768 {
-      padding: 3rem 2rem 3rem 7rem;
+      font-size: 3.2rem;
     }
 
     @include _1200 {
-      padding: 4rem 2rem 4rem 8rem;
+      padding-top: 3.8rem;
+      font-size: 3.4rem;
     }
   }
-
-  &__blue-title {}
 
   &__blue-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    padding: 1.5rem 2rem 2rem 4.5rem;
+
+    @include _415 {
+      padding: 3rem 5rem 3rem 6.6rem;
+    }
+
+    @include _480 {
+      padding: 3rem 6rem 3rem 6.9rem;
+    }
+
+    @include _768 {
+      padding: 3rem 5rem 3.1rem 7rem;
+    }
+
+    @include _1200 {
+      padding: 3rem 5rem 3.8rem 8.2rem;
+    }
   }
 
   &__blue-item {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+      background-color: $white;
+      left: -2.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include _415 {
+        left: -3rem;
+      }
+
+      @include _1200 {
+        left: -4rem;
+      }
+    }
+
     p {
       font-size: 1.6rem;
       line-height: 150%;
