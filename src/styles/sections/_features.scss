@@ -1,7 +1,9 @@
 .features {
   padding-bottom: 5rem;
 
-  &__title {}
+  @include _1000{
+    padding-bottom: 10rem;
+  }
 
   &__grid {
     display: grid;
