@@ -40,10 +40,10 @@
 
   &__cards {
     display: flex;
-    // flex-direction: column;
+    align-items: stretch;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     column-gap: 8rem;
     row-gap: 9rem;
     padding: 0 1rem;
@@ -64,6 +64,7 @@
   }
 
   &__card {
+    flex-grow: 1;
     max-width: 31rem;
 
     @include _768 {
