@@ -1,0 +1,71 @@
+.reviews {
+
+  &__container {}
+
+  &__title {
+    margin-bottom: 3rem;
+
+    @include _415 {
+      margin-bottom: 6.5rem;
+    }
+
+    @include _480 {
+      margin-bottom: 6rem;
+    }
+
+    @include _768 {
+      margin-bottom: 12rem;
+    }
+
+    @include _1000 {
+      margin-bottom: 14rem;
+    }
+
+    @include _1200 {
+      margin-bottom: 14rem;
+    }
+  }
+
+  &__swiper {}
+
+  &__wrapper {}
+
+  &__card-outer {
+    padding: 0 2rem;
+    max-width: 71rem;
+  }
+
+  &__card {
+    border-radius: 20px;
+    background: $white;
+
+    width: 100%;
+    margin: 0 auto;
+
+    @include _1200 {
+      padding: 3rem 5rem 4rem 4.5rem;
+    }
+
+    &-vk {
+      background:
+        linear-gradient($white 0 0) padding-box,
+        #4C75A3 border-box;
+      border: 5px solid transparent;
+      border-radius: 20px;
+    }
+
+    &-insta {
+      background:
+        linear-gradient($white 0 0) padding-box,
+        linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) border-box;
+      border: 5px solid transparent;
+      border-radius: 20px;
+    }
+  }
+
+  &__navigation {}
+
+  &__arrow-left {}
+
+  &__arrow-right {}
+}
