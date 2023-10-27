@@ -1,0 +1,77 @@
+.price {
+  padding: 3rem 0 4rem;
+  background: $bg;
+
+  @include _415 {
+    padding: 3rem 0;
+  }
+
+  @include _480 {
+    padding: 2rem 0;
+  }
+
+  @include _768 {
+    padding: 4rem 0;
+  }
+
+  @include _1200 {
+    padding: 6rem 0 10rem;
+  }
+
+  &__title {
+    margin-bottom: 8rem;
+
+    @include _415 {
+      margin-bottom: 7rem;
+    }
+
+    @include _480 {
+      margin-bottom: 8rem;
+    }
+
+    @include _768 {
+      margin-bottom: 9rem;
+    }
+
+    @include _1200 {
+      margin-bottom: 14rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8rem;
+    row-gap: 9rem;
+    padding: 0 1rem;
+
+    @include _768 {
+      column-gap: auto;
+    }
+
+    @include _1000 {
+      column-gap: auto;
+      flex-wrap: nowrap;
+      padding: 0;
+    }
+
+    @include _1200 {
+      justify-content: space-between;
+    }
+  }
+
+  &__card {
+    max-width: 31rem;
+
+    @include _768 {
+      max-width: 28rem;
+    }
+
+    @include _1200 {
+      max-width: 29.3rem;
+    }
+  }
+}
