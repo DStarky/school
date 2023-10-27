@@ -1,7 +1,6 @@
 .compare {
   padding: 5rem 0;
 
-
   @include _480 {
     padding: 7rem 0;
   }
@@ -9,9 +8,6 @@
   @include _768 {
     padding: 8rem 0;
   }
-
-
-  &__title {}
 
   &__flex {
     display: flex;
@@ -166,8 +162,6 @@
     }
   }
 
-  &__white-item-text {}
-
   &__white-item-bold {
     font-weight: 700;
   }
@@ -265,8 +259,6 @@
       }
     }
   }
-
-  &__blue-item-text {}
 
   &__blue-item-bold {
     font-weight: 700;

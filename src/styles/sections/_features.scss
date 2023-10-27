@@ -1,0 +1,105 @@
+.features {
+  padding-bottom: 5rem;
+
+  &__title {}
+
+  &__grid {
+    display: grid;
+    row-gap: 3rem;
+
+    @include _415 {
+      row-gap: 4rem;
+    }
+
+    @include _480 {
+      row-gap: 3rem;
+    }
+
+    @include _768 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include _1000 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__img {
+    margin: 0 auto 2rem;
+    width: 10rem;
+    height: 10rem;
+
+    @include _415 {
+      width: 12.5rem;
+      height: 12.5rem;
+      margin: 0 auto 3rem;
+    }
+
+    @include _480 {
+      width: 13rem;
+      height: 13rem;
+    }
+
+    @include _768 {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    @include _1200 {
+      width: 16rem;
+      height: 16rem;
+    }
+  }
+
+  &__item-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 103.2%;
+    margin-bottom: 1rem;
+
+    @include _415 {
+      font-size: 2rem;
+    }
+
+    @include _768 {
+      font-size: 1.8rem;
+    }
+
+    @include _1200 {
+      font-size: 2rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    line-height: 150%;
+    margin: 0 auto;
+    max-width: 28rem;
+
+    @include _415 {
+      max-width: 31rem;
+    }
+
+    @include _480 {
+      max-width: 38rem;
+    }
+
+    @include _768 {
+      font-size: 1.4rem;
+      max-width: 30rem;
+    }
+
+    @include _1000 {
+      min-width: 25rem;
+    }
+
+    @include _1200 {
+      font-size: 1.5rem;
+      max-width: 31rem;
+    }
+  }
+}
