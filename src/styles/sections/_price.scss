@@ -40,21 +40,25 @@
 
   &__cards {
     display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
     justify-content: center;
-    // align-items: center;
+    align-items: center;
+    flex-direction: column;
     column-gap: 8rem;
     row-gap: 9rem;
     padding: 0 1rem;
-
+    
     @include _768 {
+      flex-direction: row;
+      flex-wrap: wrap;
       column-gap: auto;
+      align-items: stretch;
     }
 
     @include _1000 {
       column-gap: auto;
       flex-wrap: nowrap;
+      column-gap: 6rem;
+
       padding: 0;
     }
 
@@ -69,6 +73,10 @@
 
     @include _768 {
       max-width: 28rem;
+    }
+
+    @include _1000 {
+      max-width: 25rem;
     }
 
     @include _1200 {
