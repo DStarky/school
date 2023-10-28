@@ -5,6 +5,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 import { menuToggle } from './src/scripts/menuToggle'
+import { collapse } from './src/scripts/collapse';
 import './src/styles/style.scss'
 
 const swiper = new Swiper('.reviews__swiper', {
@@ -24,4 +25,6 @@ const swiper = new Swiper('.reviews__swiper', {
   }
 
 });
+
 menuToggle();
+collapse();
