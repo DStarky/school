@@ -124,6 +124,8 @@
     }
 
     &.active+.faq__collapse {
+      -webkit-transform: translate3d(0, 0, 0);
+      will-change: grid-template-rows, padding-top;
       grid-template-rows: 1fr;
       padding-top: 2rem;
 
@@ -140,6 +142,7 @@
 
   &__collapse {
     will-change: grid-template-rows, padding-top;
+    -webkit-transform: translate3d(0, 0, 0);
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.5s ease, padding-top 0.5s ease;
