@@ -1,5 +1,5 @@
 .faq {
-
+  -webkit-transform: translate3d(0, 0, 0);
   padding-bottom: 5rem;
 
   @include _480 {
@@ -124,7 +124,6 @@
     }
 
     &.active+.faq__collapse {
-      -webkit-transform: translate3d(0, 0, 0);
       grid-template-rows: 1fr;
       padding-top: 2rem;
 
