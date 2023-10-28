@@ -167,13 +167,12 @@
   }
 
   &__img {
-    @include _1000{
+    @include _1000 {
       grid-row: 2 / 3;
       grid-column: 2 / 3;
-      width: 100%;
-      // position: absolute;
-      // right: 0;
+      width: 48.5rem;
     }
+
     @include _1200 {
       position: absolute;
       bottom: -11rem;
