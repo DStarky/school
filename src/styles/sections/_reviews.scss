@@ -1,4 +1,31 @@
 .reviews {
+  padding-bottom: 5rem;
+
+  @include _415 {
+    background-image: url("/images/review-bg.svg");
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: 50% 50%;
+  }
+
+  @include _480 {
+    padding-bottom: 7rem;
+    background-size: 34rem;
+    background-position: 50% 35%;
+  }
+
+  @include _768 {
+    padding-bottom: 8rem;
+    background-position: 65% 35%;
+    background-size: 53rem;
+  }
+
+
+  @include _1200 {
+
+    background-position: 65% 40%;
+    background-size: 65rem;
+  }
 
   &__container {}
 
@@ -22,7 +49,7 @@
     }
 
     @include _1200 {
-      margin-bottom: 14rem;
+      margin-bottom: 20rem;
     }
   }
 
@@ -31,16 +58,27 @@
   &__wrapper {}
 
   &__card-outer {
-    padding: 0 2rem;
+    padding: 0 3rem;
     max-width: 71rem;
   }
 
   &__card {
     border-radius: 20px;
     background: $white;
+    box-shadow: 14px 22px 40px 0px rgba(30, 35, 66, 0.28);
 
     width: 100%;
     margin: 0 auto;
+
+    padding: 2rem 2rem 3rem 2rem;
+
+    @include _415 {
+      padding: 2rem 1.5rem;
+    }
+
+    @include _768 {
+      padding: 4rem 2.5rem;
+    }
 
     @include _1200 {
       padding: 3rem 5rem 4rem 4.5rem;
@@ -52,6 +90,37 @@
         #4C75A3 border-box;
       border: 5px solid transparent;
       border-radius: 20px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+        width: 3rem;
+        height: 3rem;
+        background-image: url('/icons/vk.svg');
+        background-size: contain;
+
+        @include _415 {
+          width: 2.4rem;
+          height: 2.4rem;
+          top: 1.4rem;
+          left: 2rem;
+        }
+
+        @include _480 {
+          display: none;
+        }
+
+        @include _768 {
+          display: block;
+          left: 3rem;
+          top: 3rem;
+          width: 4rem;
+          height: 4rem;
+        }
+      }
     }
 
     &-insta {
@@ -60,12 +129,55 @@
         linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) border-box;
       border: 5px solid transparent;
       border-radius: 20px;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+        width: 3rem;
+        height: 3rem;
+        background-image: url('/icons/insta.svg');
+        background-size: contain;
+
+        @include _1200 {
+          left: 4rem;
+          top: 2rem;
+          width: 4rem;
+          height: 4rem;
+        }
+      }
     }
   }
 
-  &__navigation {}
+  &__navigation {
 
-  &__arrow-left {}
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
 
-  &__arrow-right {}
+    @include _415 {
+      margin-top: 6.5rem;
+    }
+
+    @include _480 {
+      margin-top: 6rem;
+    }
+
+    @include _768 {
+      margin-top: 12rem;
+    }
+
+    @include _1200 {
+      margin-top: 20rem;
+    }
+  }
+
+  &__arrow-left,
+  &__arrow-right {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
+  }
+
 }
