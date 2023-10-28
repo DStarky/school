@@ -1,0 +1,105 @@
+.application {
+  padding-bottom: 5rem;
+
+  @include _480 {
+    padding-bottom: 7rem;
+  }
+
+  @include _768 {
+    padding-bottom: 8rem;
+  }
+
+  @include _1200 {
+    padding-bottom: 10rem;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    line-height: 103%;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    span {
+      background: linear-gradient(27deg, #4271DF 16.72%, #789CF1 95.45%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @include _415 {
+      font-size: 3.4rem;
+    }
+
+    @include _768 {
+      font-size: 3.8rem;
+
+    }
+
+    @include _1000 {
+      font-size: 4rem;
+      text-align: left;
+    }
+
+    @include _1200 {
+      font-size: 5rem;
+
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 103%;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @include _415 {
+      font-size: 1.5rem;
+      line-height: 130%;
+      margin-bottom: 3rem;
+    }
+
+    @include _480 {
+      font-size: 1.8rem;
+      line-height: 103%;
+    }
+
+    @include _768 {
+      margin-bottom: 11rem;
+    }
+
+    @include _1000 {
+      text-align: left;
+    }
+
+    @include _1200 {
+      font-size: 2rem;
+    }
+  }
+
+  &__form {
+    padding: 3rem 2rem;
+    box-shadow: 5px 15px 40px 0px rgba(30, 35, 66, 0.15);
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include _415 {
+      padding: 3.5rem 2.5rem;
+    }
+  }
+
+  &__agree {
+    font-size: 1.2rem;
+    line-height: 133%;
+    color: #9e9e9e;
+
+    a{
+      text-decoration: underline;
+    }
+  }
+
+  &__img {}
+}
