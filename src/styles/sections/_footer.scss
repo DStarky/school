@@ -13,6 +13,16 @@
     line-height: 192%;
   }
 
+  a {
+    transition: filter 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        filter: contrast(2);
+      }
+    }
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -60,9 +70,6 @@
     }
   }
 
-  &__logo-link {}
-
-  &__logo-img {}
 
   &__classes {
     grid-column: 1 / 2;
@@ -95,10 +102,6 @@
       font-size: 2rem;
     }
   }
-
-  &__list {}
-
-  &__item {}
 
   &__documents {
     grid-column: 2 / 3;
@@ -165,7 +168,6 @@
     @include _1000 {
       grid-column: 5 / 6;
       flex-direction: column;
-      // margin-left: auto;
     }
   }
 
@@ -205,5 +207,5 @@
     }
   }
 
-  &__nda {}
+
 }
