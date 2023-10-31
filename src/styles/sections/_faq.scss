@@ -15,6 +15,27 @@
     background-color: $bg;
     border-radius: 2.5rem;
     position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0rem;
+      height: 100%;
+      background-color: $main;
+      top: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    &.active {
+      &::before {
+        content: '';
+
+        width: 1rem;
+
+      }
+    }
 
     @include _415 {
       padding: 2.5rem 3.5rem;
@@ -128,6 +149,9 @@
       will-change: grid-template-rows, padding-top;
       grid-template-rows: 1fr;
       padding-top: 2rem;
+
+
+
 
       @include _768 {
         padding-top: 3rem;
